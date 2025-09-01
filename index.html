@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Authentication Page -->
+    <div id="auth-page" class="auth-container">
+        <div class="auth-card">
+            <div class="logo-container">
+                <img src="1. Final Logo_ PNG.png" alt="Roar Threads Logo" width="225" height="225">
+            </div>
+            
+            <div class="auth-forms">
+                <!-- Login Form -->
+                <div id="login-form" class="form-container active">
+                    <h2>Welcome Back</h2>
+                    <p class="form-subtitle">Sign in to access our exclusive collections</p>
+                    
+                    <form id="login-email-form" class="auth-form">
+                        <div class="form-group">
+                            <input type="email" id="login-email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="login-password" class="form-control" placeholder="Password" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Sign In</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+                    
+                    <div class="social-buttons">
+                        <button id="google-signin" class="btn btn-social google-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>       
+                            <strong>Google</strong>
+                            <script src="https://apis.google.com/js/platform.js" async defer></script>
+                                    <div id="g_id_onload"
+             data-client_id="YOUR_CLIENT_ID"
+             data-callback="handleCredentialResponse">
+        </div>
+        <div class="g_id_signin"
+             data-type="standard"
+             data-size="large"
+             data-theme="outline"
+             data-text="sign_in_with"
+             data-shape="rectangular"
+             data-logo_alignment="left">
+        </div>
+                        </button>
+                        <button id="apple-signin" class="btn btn-social apple-btn">
+                            <i class="fab fa-apple"></i>
+                            <strong>Apple ID</strong>
+                        </button>
+                    </div>
+                    
+                    <p class="auth-switch">
+                        Don't have an account? <a href="#" id="show-signup">Sign up</a>
+                    </p>
+                </div>
+                
+                <!-- Signup Form -->
+                <div id="signup-form" class="form-container">
+                    <h2>Join Our Elite</h2>
+                    <p class="form-subtitle">Create your account for exclusive access</p>
+                    
+                    <form id="signup-email-form" class="auth-form">
+                        <div class="form-group">
+                            <input type="text" id="signup-name" class="form-control" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="signup-email" class="form-control" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-password" class="form-control" placeholder="Password (min 6 characters)" minlength="6" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="signup-confirm-password" class="form-control" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full-width">Create Account</button>
+                    </form>
+                    
+                    <div class="divider">
+                        <span>or continue with</span>
+                    </div>
+                    
+                    <div class="social-buttons">
+                        <button id="google-signup" class="btn btn-social google-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                            </svg>
+                            <strong>Google</strong>
+                        </button>
+                        <button id="apple-signup" class="btn btn-social apple-btn">
+                            <i class="fab fa-apple"></i>
+                            <strong>Apple ID</strong>
+                        </button>
+                    </div>
+                    
+                    <p class="auth-switch">
+                        Already have an account? <a href="#" id="show-login">Sign in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Homepage -->
+    <div id="homepage" class="homepage hidden">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                     <div class="logo-container">
+                <img src="1. Final Logo_ PNG.png" alt="Roar Threads Logo" width="75" height="75">
+            </div>
+                    <nav class="nav">
+                        <a href="#" class="nav-link">Women</a>
+                        <a href="#" class="nav-link">Men</a>
+                        <a href="#" class="nav-link">New Arrivals</a>
+                        <a href="#" class="nav-link">Collections</a>
+                        <a href="#" class="nav-link">Sale</a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="search-container">
+                            <input type="text" id="search-input" class="search-input" placeholder="Search luxury fashion...">
+                            <i class="fas fa-search search-icon"></i>
+                        </div>
+                        <button class="icon-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="icon-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                        <button id="logout-btn" class="btn btn--outline btn--sm">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Where Heritage Meets High Fashion</h1>
+                    <p class="hero-subtitle">Discover our exclusive collection of luxury fashion crafted for the elite</p>
+                    <button class="btn btn--primary btn--lg hero-cta">Explore Collections</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/b9bb59a2-d4fa-4776-9cc5-cde8a79930ef.png" alt="Luxury Fashion Model" class="hero-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Collections -->
+        <section class="collections">
+            <div class="container">
+                <h2 class="section-title">Featured Collections</h2>
+                <div class="collections-grid">
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/b3fdde52-1f6e-4332-90ca-0a35d3cdc96f.png" alt="New Arrivals">
+                        </div>
+                        <div class="collection-info">
+                            <h3>New Arrivals</h3>
+                            <p>Latest luxury pieces from our exclusive designers</p>
+                            <button class="btn btn--outline">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/b3fdde52-1f6e-4332-90ca-0a35d3cdc96f.png" alt="Best Sellers">
+                        </div>
+                        <div class="collection-info">
+                            <h3>Best Sellers</h3>
+                            <p>Our most coveted heritage designs</p>
+                            <button class="btn btn--outline">Shop Now</button>
+                        </div>
+                    </div>
+                    <div class="collection-card">
+                        <div class="collection-image">
+                            <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/b3fdde52-1f6e-4332-90ca-0a35d3cdc96f.png" alt="Seasonal Edits">
+                        </div>
+                        <div class="collection-info">
+                            <h3>Seasonal Edits</h3>
+                            <p>Curated selections for the discerning wardrobe</p>
+                            <button class="btn btn--outline">Shop Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotional Banner -->
+        <section class="promo-banner">
+            <div class="container">
+                <div class="banner-content">
+                    <h2>Limited Edition Collection</h2>
+                    <p>Exclusive pieces crafted by master artisans - Only 50 pieces available</p>
+                    <button class="btn btn--primary btn--lg">Shop Limited Edition</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending Products -->
+        <section class="trending-products">
+            <div class="container">
+                <h2 class="section-title">Trending Now</h2>
+                <div class="products-grid" id="products-grid">
+                    <!-- Products will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌱</div>
+                        <h3>Sustainable Fashion</h3>
+                        <p>Ethically sourced materials and eco-friendly production processes</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✋</div>
+                        <h3>Handcrafted Excellence</h3>
+                        <p>Each piece meticulously crafted by master artisans</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Heritage Quality</h3>
+                        <p>Timeless designs built to last generations</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💎</div>
+                        <h3>Exclusive Collections</h3>
+                        <p>Limited edition pieces for the discerning connoisseur</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section class="social-proof">
+            <div class="container">
+                <h2 class="section-title">What Our Elite Clients Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Roar Threads has redefined my wardrobe. Every piece is a masterpiece of craftsmanship."</p>
+                        <strong>Isabella Rodriguez</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"The attention to detail and quality is unmatched. Truly luxury fashion at its finest."</p>
+                        <strong>James Wellington</strong>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Sustainable luxury that doesn't compromise on style. Absolutely love this brand!"</p>
+                        <strong>Catherine Ashford</strong>
+                    </div>
+                </div>
+                
+                <div class="press-mentions">
+                    <p>As featured in:</p>
+                    <div class="press-logos">
+                        <span class="press-logo">Vogue</span>
+                        <span class="press-logo">Harper's Bazaar</span>
+                        <span class="press-logo">Elle</span>
+                        <span class="press-logo">Vanity Fair</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Join Our Exclusive Circle</h2>
+                    <p>Get early access to new collections and enjoy 15% off your first purchase</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" class="form-control" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn--primary">Get 15% Off</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>ROAR THREADS</h3>
+                        <p>Where Heritage Meets High Fashion</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Shop</h4>
+                        <ul>
+                            <li><a href="#">Women</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                            <li><a href="#">Sale</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="#">Size Guide</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Sustainability</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Roar Threads. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Success</h3>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p id="modal-message">Operation completed successfully!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
